@@ -14,12 +14,15 @@
      <tr>
      <td><%= book.title %></td>
      <td><%= book.body %></td>
-     <td><%= link_to book.title, "/books/#{book.id}" %></td>
+     <td><%= link_to "Show", book_path(book.id), class: "show_#{book.id}" %></td>
+     <td><%= link_to "Edit", edit_book_path(book.id), class: "edit_#{book.id}" %></td>
+     <td><%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "date-confirm" => "本当に削除しますか？" %></td>
      <% end %>
      </tr>
  </tbody>
 </table>
 
-<h2>New Book</h2>
-<form class="new_book" id="new_book" action="/books" accept-charset="UTF-8" method="post">
+
+
+</form>
 
