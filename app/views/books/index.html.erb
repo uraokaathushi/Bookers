@@ -1,5 +1,5 @@
+<p id="notice"></p>
 <h1>Books</h1>
-
 
 <table>
  <thead>
@@ -14,8 +14,12 @@
      <tr>
      <td><%= book.title %></td>
      <td><%= book.body %></td>
+     <td><%= link_to book.title, "/books/#{book.id}" %></td>
      <% end %>
      </tr>
  </tbody>
 </table>
+
+<h2>New Book</h2>
+<form class="new_book" id="new_book" action="/books" accept-charset="UTF-8" method="post">
 
